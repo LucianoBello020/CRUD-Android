@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo1"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -25,59 +26,25 @@
         android:id="@+id/btn_preparar_cafe"
         android:layout_width="346dp"
         android:layout_height="65dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="108dp"
         android:backgroundTint="#C77B12"
         android:drawableLeft="@drawable/crear"
-        android:text="Preparar tu Café"
+        android:text="Preparar Café está el CRUD
+                         de mi aplicación"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/textView" />
 
-    <Button
-        android:id="@+id/btn_comprar"
-        android:layout_width="342dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="97dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="92dp"
-        android:backgroundTint="#5D8E24"
-        android:drawableLeft="@drawable/comprar"
-        android:text="Comprar"
-        app:layout_constraintBottom_toTopOf="@+id/btn_preparar_cafe"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
-
-    <Button
-        android:id="@+id/btn_ver_menu"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="127dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="184dp"
-        android:backgroundTint="#3D8694"
-        android:drawableLeft="@drawable/listar"
-        android:text="Ver el Menú de Opciones"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_preparar_cafe"
-        app:layout_constraintVertical_bias="0.666" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,27 +2,37 @@ package com.lucianobello.micafe;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.view.MenuItem;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnPrepararCafe = findViewById(R.id.btn_preparar_cafe);
-        Button btnComprar = findViewById(R.id.btn_comprar);
-        Button btnVerMenu = findViewById(R.id.btn_ver_menu);
+        // Configurar BottomNavigationView
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
 
-        btnPrepararCafe.setOnClickListener(v -> openActivity(PrepararCafeActivity.class));
-        btnComprar.setOnClickListener(v -> openActivity(ComprarActivity.class));
-        btnVerMenu.setOnClickListener(v -> openActivity(MenuOpcionesActivity.class));
-    }
+        // Use lambda for setting OnItemSelectedListener
+        bottomNav.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.nav_preparar_cafe) {
+                startActivity(new Intent(MainActivity.this, PrepararCafeActivity.class));
+                return true;
+            } else if (item.getItemId() == R.id.nav_menu_principal) {
+                // Sin accion necesaria, ya se estan en el MainActivity
+                return true;
+            } else if (item.getItemId() == R.id.nav_comprar) {
+                startActivity(new Intent(MainActivity.this, ComprarActivity.class));
+                return true;
+            }
+            return false;
+        });
 
-    private void openActivity(Class<?> activityClass) {
-        Intent intent = new Intent(MainActivity.this, activityClass);
-        startActivity(intent);
+        // Establecer una seleccion por defecto
+        bottomNav.setSelectedItemId(R.id.nav_menu_principal);
     }
 }

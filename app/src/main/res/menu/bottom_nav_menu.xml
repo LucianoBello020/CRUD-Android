@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_preparar_cafe"
+        android:icon="@drawable/crear"
+        android:title="Preparar Café" />
+
+    <item
+        android:id="@+id/nav_menu_principal"
+        android:icon="@drawable/listar"
+        android:title="Menú Principal" />
+
+    <item
+        android:id="@+id/nav_comprar"
+        android:icon="@drawable/comprar"
+        android:title="Comprar" />
+
+</menu>

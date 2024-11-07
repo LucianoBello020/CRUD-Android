@@ -12,10 +12,38 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="327dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="488dp"
         android:onClick="volverMenuPrincipal"
         android:text="Volver al Menú Principal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="435dp"
+        android:text="En este layout Estara la logica para comprar tu cafe y su respectivo acompañamiento más adelante"
+        android:textColor="#0B0909"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="249dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginBottom="97dp"
+        android:text="MANTENIMIENTO"
+        android:textColor="#FF3D00"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
